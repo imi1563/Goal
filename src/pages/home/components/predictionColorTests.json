@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "id": "live1",
+      "label": "Live 45' 0-0 (all neutral)",
+      "game": {
+        "_id": "live1",
+        "date": "2025-10-08T10:00:00.000Z",
+        "goals": { "home": 0, "away": 0 },
+        "homeTeam": { "name": "Red Bull Bragantino", "logo": "/bragantino.png" },
+        "awayTeam": { "name": "Bahia", "logo": "/bahia.png" }
+      },
+      "score": { "status": { "short": "1H", "elapsed": 45 } }
+    },
+    {
+      "id": "ft1",
+      "label": "FT 2-1 (DC 1X correct, BTTS yes, Over2.5 yes)",
+      "game": {
+        "_id": "ft1",
+        "date": "2025-10-07T18:00:00.000Z",
+        "goals": { "home": 2, "away": 1 },
+        "homeTeam": { "name": "Team A", "logo": "" },
+        "awayTeam": { "name": "Team B", "logo": "" }
+      },
+      "score": { "status": { "short": "FT" } }
+    },
+    {
+      "id": "ft2",
+      "label": "FT 1-1 (Draw, BTTS yes, Under2.5 yes)",
+      "game": {
+        "_id": "ft2",
+        "date": "2025-10-06T18:00:00.000Z",
+        "goals": { "home": 1, "away": 1 },
+        "homeTeam": { "name": "Team C", "logo": "" },
+        "awayTeam": { "name": "Team D", "logo": "" }
+      },
+      "score": { "status": { "short": "FT" } }
+    },
+    {
+      "id": "ft3",
+      "label": "FT 0-0 (BTTS no, Under2.5 yes)",
+      "game": {
+        "_id": "ft3",
+        "date": "2025-10-05T18:00:00.000Z",
+        "goals": { "home": 0, "away": 0 },
+        "homeTeam": { "name": "Team E", "logo": "" },
+        "awayTeam": { "name": "Team F", "logo": "" }
+      },
+      "score": { "status": { "short": "FT" } }
+    },
+    {
+      "id": "cornersKnown",
+      "label": "FT 1-0, Corners total 11 (for threshold tests)",
+      "game": {
+        "_id": "cornersKnown",
+        "date": "2025-10-04T18:00:00.000Z",
+        "goals": { "home": 1, "away": 0 },
+        "homeTeam": { "name": "Team G", "logo": "" },
+        "awayTeam": { "name": "Team H", "logo": "" }
+      },
+      "score": { "status": { "short": "FT" }, "corners": { "total": 11 } }
+    },
+    {
+      "id": "cornersUnknown",
+      "label": "FT 2-2, Corners unknown (should stay neutral)",
+      "game": {
+        "_id": "cornersUnknown",
+        "date": "2025-10-03T18:00:00.000Z",
+        "goals": { "home": 2, "away": 2 },
+        "homeTeam": { "name": "Team I", "logo": "" },
+        "awayTeam": { "name": "Team J", "logo": "" }
+      },
+      "score": { "status": { "short": "FT" } }
+    }
+  ]
+}

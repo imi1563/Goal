@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Baloo Bhai';
+  src: url('./utils/fonts/BalooBhai-Regular.woff2') format('woff2'),
+    url('./utils/fonts/BalooBhai-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-900 hover:bg-gray-300;
+  }
+
+  .btn-outline {
+    @apply btn border border-gray-300 bg-transparent hover:bg-gray-50;
+  }
+}
+
+html {
+  font-size: 16px;
+  /* Default for 1920px screens */
+}
+
+/* Adjust for larger screens */
+@media (min-width: 2560px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+/* Adjust for 1440px screens */
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Adjust for 1280px screens */
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Adjust for tablets (1024px) */
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Adjust for smaller devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1E1B3A;
+  min-width: 320px;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+p,
+span,
+a,
+small,
+label {
+  font-family: 'Baloo 2', sans-serif;
+}
+
+/* Global responsive adjustments */
+@media (max-width: 640px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+
+.font-baloo-bhai {
+  font-family: 'Baloo Bhai' !important;
+}
+
+/* Keep dark input background when value is filled or autofilled */
+input,
+textarea,
+select {
+  background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #323159 inset;
+  box-shadow: 0 0 0px 1000px #323159 inset;
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Utility: heavy black outline for headline text */
+.text-outline-dark {
+  -webkit-text-stroke-width: 8px;
+  -webkit-text-stroke-color: #000000;
+  paint-order: stroke fill;
+}
+
+/* Slightly thinner outline on small screens for legibility */
+@media (max-width: 768px) {
+  .text-outline-dark {
+    -webkit-text-stroke-width: 6px;
+  }
+}
